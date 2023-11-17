@@ -52,3 +52,46 @@ namespace ExcelReplace
         }
     }
 }
+//using ClosedXML.Excel;
+//using System;
+//using System.Text.RegularExpressions;
+
+//namespace ExcelModify
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            try
+//            {
+//                using (var workbook = new XLWorkbook("path/to/your/excelfile.xlsx"))
+//                {
+//                    var worksheet = workbook.Worksheet(1); // assuming data is in the first worksheet
+
+//                    foreach (var row in worksheet.RangeUsed().Rows())
+//                    {
+//                        for (int col = 1; col <= 2; col++) // Columns A and B
+//                        {
+//                            string originalValue = row.Cell(col).GetValue<string>();
+//                            string modifiedValue = TransformToCamelCase(originalValue);
+//                            row.Cell(col).SetValue(modifiedValue);
+//                        }
+//                    }
+
+//                    workbook.Save(); // Save the changes to the Excel file
+//                    Console.WriteLine("Excel file updated successfully.");
+//                }
+//            }
+//            catch (Exception ex)
+//            {
+//                Console.WriteLine($"An error occurred: {ex.Message}");
+//            }
+//        }
+
+//        static string TransformToCamelCase(string input)
+//        {
+//            // Use Regex to identify parts of the string to capitalize
+//            return Regex.Replace(input.ToLower(), "/[a-z]", m => m.Value.ToUpper());
+//        }
+//    }
+//}
